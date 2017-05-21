@@ -9,13 +9,7 @@ function [Dimen, D] = SetCCNN(Topology,  H, I)
             
              Dimen(1) = D; %first SP
                 
-%                for n = 1: length(H)-1 %rest of SP 
-%                    Hdiff = H(n+1) - H(n); 
-%                     Indiff = I(n+1) - I(n);
-%                     
-%                     
-%                     Dimen(n+1) = ((Topology(1) +1 + Topology(3)) *  Hdiff) + (Idiff *  ( Topology(2)   )) ; %input links + bias + output links 
-%                end
+ 
 
                for n = 1: length(I)-1 %rest of SP 
                    Hdiff = H(n+1) - H(n); 
