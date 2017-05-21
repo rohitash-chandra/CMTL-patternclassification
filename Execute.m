@@ -22,44 +22,25 @@ out2 = fopen(strcat(int2str(app) ,'out2.txt'), 'w');
 MaxFE = 40000 * NumSteps ; % 4bit  
  
 
- MinError = [0.00000001]; %Min Error for each problem
+ MinError = [0.0001]; %Min Error for each problem
  
- NumProb = 7;
+ NumProb = 2;
  
   ProbMin = [-5]; % initial pop range
   ProbMax = [5];
    
   
 
-In = [13, 4,  34, 16, 9, 4, 13, 4, 24, 15, 4, 9, 4] ; % state input for Wine, Iris, 6Bit
-Hidd = [8, 5,  8, 6, 6, 5, 8, 14, 14, 18, 5, 28, 6];
-Outdata = [3, 2, 1, 1, 1, 3, 1, 4, 4, 1, 1, 3]; % state out for each data
+In = [13, 4 ] ; % state input for Wine, Iris, 6Bit
+Hidd = [8, 5 ];
+Outdata = [3, 2 ]; % state out for each data
  
  Decom = 5; % type of decomposition of NN. 1 = Layer level, 2 = Network level, 3 = NSP, 4 = Synapse level, 5 is ESP
 
-MaxRun = 3  ;
-
-%for app = 8:9
-
-    if app == 7
-        MaxFE = MaxFE * 2;
-    end
+MaxRun = 3  ; # num of exp runs
+ 
     
-    if app == 8
-        MaxFE = MaxFE * 3;
-    end
-
-
-    if app == 9
-        MaxFE = MaxFE * 3;
-    end
-    
-    
-    if app == 10
-        MaxFE = MaxFE * 3;
-    end
-
-
+     
   for depth = 8:4:8
         Suc = 0; % when minimum error is satisfied
         
