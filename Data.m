@@ -1,15 +1,15 @@
 function [InputTrain, TargetTrain,InputTest, TargetTest] = Data(problem, step, Topology) 
 
 if problem == 1
-    load   Data/Wine/rtrain.txt;  
-    load   Data/Wine/rtest.txt;    
+    load   ProbData/Wine/rtrain.txt;  
+    load   ProbData/Wine/rtest.txt;    
     input = Topology(1);
     output = Topology(3);
   end
  
     if problem == 2
-    load   Data/Iris/rtrain.txt;  
-    load   Data/Iris/rtest.txt;    
+    load   ProbData/Iris/rtrain.txt;  
+    load   ProbData/Iris/rtest.txt;    
     input = Topology(1);
     output = Topology(3);
     end 
