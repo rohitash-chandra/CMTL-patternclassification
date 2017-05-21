@@ -1,24 +1,18 @@
-function [InputTrain, TargetTrain,InputTest, TargetTest] = Data(problem, step, Topology)
-
-   
-
+function [InputTrain, TargetTrain,InputTest, TargetTest] = Data(problem, step, Topology) 
 
 if problem == 1
-    load  ~/Dropbox/Experiments/2017/FNN-General-MTL/DevelopmentalLearning-Classification/BenchmarkComparisionSGD/Data/Wine/rtrain.txt;  
-    load  ~/Dropbox/Experiments/2017/FNN-General-MTL/DevelopmentalLearning-Classification/BenchmarkComparisionSGD/Data/Wine/rtest.txt;    
+    load   Data/Wine/rtrain.txt;  
+    load   Data/Wine/rtest.txt;    
     input = Topology(1);
     output = Topology(3);
   end
  
     if problem == 2
-    load  ~/Dropbox/Experiments/2017/FNN-General-MTL/DevelopmentalLearning-Classification/BenchmarkComparisionSGD/Data/Iris/rtrain.txt;  
-    load  ~/Dropbox/Experiments/2017/FNN-General-MTL/DevelopmentalLearning-Classification/BenchmarkComparisionSGD/Data/Iris/rtest.txt;    
+    load   Data/Iris/rtrain.txt;  
+    load   Data/Iris/rtest.txt;    
     input = Topology(1);
     output = Topology(3);
-    end
-     
-      
-      
+    end 
     
  TRAIN=rtrain;
  TEST= rtest; 
