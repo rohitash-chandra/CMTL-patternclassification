@@ -1,8 +1,11 @@
-% CCGA for FNN by Rohitash Chandra, 2016: c.rohitash(at)gmail.com
-%note this is for hidden layer. But many other layer can be done
+% by Rohitash Chandra, 2017: c.rohitash(at)gmail.com
+%note this is for one hidden layer.  
 
-% can use for classfication and also for time series predition or
-% regression. 
+%  used for classfication  
+% 
+% built on: https://github.com/rohitash-chandra/Cooperative-Coevolution-CMAES
+
+% related work for time series: https://github.com/rohitash-chandra/CMTL-PRNN/
 
 for prob = 1:2  % just try two problems 
      
