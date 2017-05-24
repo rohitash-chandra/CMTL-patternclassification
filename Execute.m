@@ -4,10 +4,9 @@
 % can use for classfication and also for time series predition or
 % regression. 
 
-
-
-function Execute(prob) 
-
+for prob = 1:2  % just try two problems 
+     
+depth = 10 ; % depth of search for each sub-population
 app = prob;
 
 out1 = fopen(strcat(int2str(app) ,'out1.txt'), 'w');
@@ -37,11 +36,11 @@ Outdata = [3, 2 ]; % state out for each data
  
  Decom = 5; % type of decomposition of NN. 1 = Layer level, 2 = Network level, 3 = NSP, 4 = Synapse level, 5 is ESP
 
-MaxRun = 3  ; # num of exp runs
+MaxRun = 3  ; %num of exp runs
  
     
      
-  for depth = 8:4:8
+  
         Suc = 0; % when minimum error is satisfied
         
         SucT1 = 0;
@@ -210,4 +209,4 @@ MaxRun = 3  ; # num of exp runs
 fclose(out1);
 fclose(out2);
 
-end
+
