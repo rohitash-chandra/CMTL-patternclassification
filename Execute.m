@@ -7,7 +7,7 @@
 
 % related work for time series: https://github.com/rohitash-chandra/CMTL-PRNN/
 
-for prob = 1:2  % just try two problems 
+for prob = 1:3  % just try two problems 
      
 depth = 10 ; % depth of search for each sub-population
 app = prob;
@@ -18,7 +18,7 @@ out2 = fopen(strcat(int2str(app) ,'out2.txt'), 'w');
 % Declare NN here
 
             
- NumSteps =  3;
+ NumSteps =  3; % refers to number of modules or subpopulations. 
 
 
 MaxFE = 40000 * NumSteps ; % 4bit  
